@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.menu-bar {
+  background-color: #1988f7;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+#about {
+  background-color: #19f750;
+}
+
+#index {
+  background-color: #ff0000;
+}
+
+#work {
+  background-color: aqua;
+}
+.item {
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 14px 20px;
+}
+
+.item.title {
+  font-weight: 600;
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+a {
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+ }
+ 
+ a::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 4px;
+   width: 100%;
+   background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+   background-size: 200% auto;
+   transition: all .5s;
+   transform: translateX(-100%);
+ }
+ 
+ a:hover::after {
+   transform: translateX(0%);
+   animation: gradient-89 3s linear infinite;
+ }
+ 
+ @keyframes gradient-89 {
+   0% { background-position: 100% 0%; }
+   50% { background-position: 0% 0%; }
+   100% { background-position: 100% 0%; }
+ }
